@@ -21,7 +21,7 @@ body {
 .main-header {
   background-color: #f7f7f7;
   padding: 20px 40px;
-  margin-bottom: 10px;
+  margin-bottom: 50px;
 }
 
 .post-img {
@@ -69,6 +69,21 @@ h1 {
 
 h2 {
   font-size: 40px;
+  position: relative;
+  /* background-color: orange; */
+}
+
+h2::after {
+  content: "TOP";
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #ffe70e;
+  color: #444;
+  display: inline-block;
+  padding: 5px 10px;
+  position: absolute;
+  top: -10px;
+  right: -25px;
 }
 
 h3 {
@@ -124,7 +139,7 @@ li:last-child {
 
 /* Misconception: This won't work*/
 article p:first-child {
-  color: red;
+  color: #fa3d3d;
 }
 
 /*Styling links*/
@@ -136,7 +151,7 @@ a:link {
 
 a:visited {
   /* color: #777; */
-  color: #1098ad;
+  color: #1061ad;
 }
 
 a:hover {
@@ -160,4 +175,9 @@ button {
 
   bottom: 50px;
   right: 50px;
+}
+
+h1::first-letter {
+  font-style: normal;
+  margin-right: 5px;
 }
