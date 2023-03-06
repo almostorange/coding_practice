@@ -36,23 +36,78 @@
         /* STARTER */
         font-family: sans-serif;
         background-color: #ddd;
-        font-size: 40px;
+        font-size: 30px;
         margin: 40px;
 
         /* CSS GRID */
+
+        /* grid-template-columns: 200px 200px 1fr 1fr; */
+        /* grid-template-rows: 300px 200px; */
+        /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+
+        display: none;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr 1fr;
+        /* height: 500px; */
+
+        column-gap: 10px;
+        row-gap: 20px;
       }
+
+      /*Temporary commenting it out-----
+
+.el--8 {
+  grid-column: 2/3;
+  /* grid-row: 1 / span 2;
+  grid-row: 1/2;
+}
+
+.el--2 {
+  grid-column: 1/4;
+  grid-column: 1 / span 4;
+  grid-column: 1/-1;
+  grid-row: 2;
+}
+
+.el--1 {
+  grid-column: 4;
+  grid-row: 1;
+}
+
+.el--6 {
+  grid-column: 4;
+  grid-row: 1;
+}
+*/
 
       .container--2 {
         /* STARTER */
         font-family: sans-serif;
         background-color: black;
         font-size: 40px;
-        margin: 100px;
+        margin: 40px;
 
-        width: 1000px;
+        width: 700px;
         height: 600px;
 
         /* CSS GRID */
+        display: grid;
+        grid-template-columns: 125px 200px 125px;
+        grid-template-rows: 250px 150px;
+        gap: 50px;
+
+        /*Aligning tracks inside container and distributing empty space*/
+
+        justify-content: center;
+        align-content: center;
+
+        /*Align items INSIDE cells: moving around inside cells*/
+        align-items: center;
+        justify-items: center;
+      }
+
+      .el--3 {
+        align-self: ;
       }
     </style>
   </head>
@@ -64,7 +119,7 @@
       <div class="el el--4">(4) are</div>
       <div class="el el--5">(5) amazing</div>
       <div class="el el--6">(6) languages</div>
-      <div class="el el--7">(7) to</div>
+      <!-- <div class="el el--7">(7) to</div> -->
       <div class="el el--8">(8) learn</div>
     </div>
 
